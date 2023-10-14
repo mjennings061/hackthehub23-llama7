@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Summary of Claim</h1>
+<p><b>Name:</b> {{name}}</p>
+
+<h2>Accident Diagram</h2>
+<u1>
+   <img src={{diagram}} alt="Rendered Image">
+</u1>
+
+<h2>Order Of Events</h2>
+<u1>
+   {{order_of_events}}
+</u1>
+
+<h2>Related Regulations</h2>
+<u1>
+   {% for reg in related_articles %}
+
+      <h4>{{reg.section_title}}</h4>
+      <p>{{reg.section_content}}</p>
+
+   {% endfor %}
+   
+</u1>
+
+<h2>Suggested judgement</h2>
+<p>{{answer}}</p>
+
+<h2>Transcript</h2>
+<u1>
+   {{transcript}}
+</u1>
+
+</body>
+</html>

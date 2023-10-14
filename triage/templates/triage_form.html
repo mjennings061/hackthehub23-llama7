@@ -1,0 +1,7 @@
+<!-- myapp/templates/myapp/form_template.html -->
+<h2>Report an Incident</h2>
+<form method="post" action="{% url 'view_report' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
